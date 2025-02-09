@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="2af59bf1-bc31-4074-979a-645540d0bac3" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="4dbbc9bf-6f37-4fef-b203-60bf7048f721" >
+		<db:my-sql-connection host="mudb.learn.mulesoft.com" port="3306" user="mule" password="mule" database="training" />
+	</db:config>
+	<flow name="practiceerickrodrigoFlow" doc:id="c45cea58-33c1-415a-9ed7-159aad01192d" >
+		<http:listener doc:name="Listener" doc:id="6a87efc0-2751-4fc5-a997-e1e404749ff1" config-ref="HTTP_Listener_config" path="/api/v1/sps/customers"/>
+		<db:select doc:name="Select" doc:id="7efe2c23-8482-4c43-9e6a-5580155966ae" config-ref="Database_Config"/>
+	</flow>
+</mule>

@@ -1,0 +1,7 @@
+example.username=myUsernameLocal
+example.password=myPasswordLocal
+dbexample.host=myHost
+dbexample.port=myPort
+dbexample.user=myUserdb
+dbexample.password=myPassworddb
+dbexample.database=myDatabasedb

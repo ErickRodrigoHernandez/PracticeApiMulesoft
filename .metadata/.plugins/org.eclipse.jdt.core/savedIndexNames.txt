@@ -1,0 +1,18 @@
+INDEX VERSION 1.134+C:\Users\acros\AnypointStudio\studio-workspace2\.metadata\.plugins\org.eclipse.jdt.core
+2376816241.index
+3225403471.index
+2993364287.index
+1082369369.index
+4078578380.index
+3816081983.index
+2216499802.index
+1690891076.index
+2328269416.index
+2086991457.index
+4205602535.index
+332383186.index
+1865797976.index
+3073962201.index
+1496748533.index
+1671771997.index
+346163147.index

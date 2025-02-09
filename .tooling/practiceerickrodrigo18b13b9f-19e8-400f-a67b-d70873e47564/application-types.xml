@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="customersDetails" format="json">
+      <types:shape format="weave" example="examples/traningModel.json"><![CDATA[%dw 2.0
+
+type customersDetails = Array<{|  FirstName: String,   LastName: String,   Email: String,   Company: String|}> {"example": "[{\\\"FirstName\\\":\\\"Erick\\\",\\\"LastName\\\":\\\"Garcia\\\",\\\"Email\\\":\\\"erickgar@gmail.com\\\",\\\"Company\\\":\\\"Ferrero\\\"},{\\\"FirstName\\\":\\\"Erick\\\",\\\"LastName\\\":\\\"Garcia\\\",\\\"Email\\\":\\\"erickgar@gmail.com\\\",\\\"Company\\\":\\\"Ferrero\\\"},{\\\"FirstName\\\":\\\"Erick\\\",\\\"LastName\\\":\\\"Garcia\\\",\\\"Email\\\":\\\"erickgar@gmail.com\\\",\\\"Company\\\":\\\"Ferrero\\\"}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#6e257ab3-ee54-454e-b8f6-c59935846022">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="customersDetails"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>

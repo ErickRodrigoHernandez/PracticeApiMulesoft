@@ -1,0 +1,31 @@
+{
+  "configs": [
+    "global.xml",
+    "practiceerickrodrigo.xml"
+  ],
+  "secureProperties": [],
+  "supportedJavaVersions": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:practiceerickrodrigo:1.0.0",
+  "minMuleVersion": "4.9.0",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        " local.properties",
+        "application-types.xml",
+        "dev.properties",
+        "examples/traningModel.json",
+        "global.xml",
+        "log4j2.xml",
+        "practiceerickrodrigo.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
